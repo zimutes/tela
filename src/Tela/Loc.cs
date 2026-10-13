@@ -20,8 +20,6 @@ public static class Loc
                      "Um leitor de vídeo para Windows e Linux: tudo o que é preciso para ver, e nada no caminho."),
         ["Credits"] = ("Video: libmpv (mpv), FFmpeg · Interface: Avalonia · Fonts: SIL Open Font License",
                        "Vídeo: libmpv (mpv), FFmpeg · Interface: Avalonia · Fontes: SIL Open Font License"),
-        ["AiNote"] = ("Written by AI (Claude, by Anthropic) at the author's request.",
-                      "Escrito por IA (Claude, da Anthropic) a pedido do autor."),
 
         // Ecrã inicial
         ["OpenFile"] = ("Open file", "Abrir ficheiro"),

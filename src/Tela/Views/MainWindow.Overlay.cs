@@ -638,7 +638,6 @@ public partial class MainWindow
                 new TextBlock { Text = $"{version?.ToString(3)} · {Loc.T("By")} · {mpv}", Classes = { "muted" } },
                 new TextBlock { Text = Loc.T("About"), TextWrapping = TextWrapping.Wrap, Margin = new Thickness(0, 6, 0, 0) },
                 new TextBlock { Text = Loc.T("Credits"), TextWrapping = TextWrapping.Wrap, FontSize = 11.5, Classes = { "muted" } },
-                new TextBlock { Text = Loc.T("AiNote"), TextWrapping = TextWrapping.Wrap, FontSize = 11.5, Classes = { "muted" } },
                 OverlayButton("Close", HideOverlay),
             },
         });

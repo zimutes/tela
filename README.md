@@ -24,15 +24,11 @@
 
 ---
 
-> ### Read this first
+> **Tested** on Windows 11 (hardware decoding through D3D11) and on Fedora 44 without a
+> graphics card (software rendering), with H.264, HEVC, MPEG-4, AAC, MP3, embedded and
+> external subtitles, several audio tracks and chapters.
 >
-> **Written by AI.** This app (the code, the icon and this README) was written by AI
-> (Claude, by Anthropic, through Claude Code) at the author's request, and is shared as-is.
-> It was tested on the author's Windows 11 PC (hardware decoding through D3D11) and on
-> Fedora 44 in a container, without a graphics card (software rendering), with H.264, HEVC,
-> MPEG-4, AAC, MP3, embedded and external subtitles, several audio tracks and chapters.
->
-> **No warranty of any kind**, see [LICENSE](LICENSE).
+> Shared as-is, **with no warranty of any kind**: see [LICENSE](LICENSE).
 
 ---
 

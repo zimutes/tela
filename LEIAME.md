@@ -24,15 +24,11 @@
 
 ---
 
-> ### Leia isto primeiro
+> **Testada** no Windows 11 (descodificação pela placa, por D3D11) e no Fedora 44 sem placa
+> gráfica (desenho por software), com H.264, HEVC, MPEG-4, AAC, MP3, legendas embutidas e em
+> ficheiro, várias faixas de áudio e capítulos.
 >
-> **Escrito por IA.** Esta app (o código, o ícone e este LEIAME) foi escrita por IA (Claude,
-> da Anthropic, através do Claude Code) a pedido do autor, e é partilhada tal como está.
-> Foi testada no PC do autor com Windows 11 (descodificação pela placa, por D3D11) e no
-> Fedora 44 num contentor, sem placa gráfica (desenho por software), com H.264, HEVC, MPEG-4,
-> AAC, MP3, legendas embutidas e em ficheiro, várias faixas de áudio e capítulos.
->
-> **Sem garantia de espécie nenhuma**, ver a [LICENSE](LICENSE).
+> Partilhada tal como está, **sem garantia de espécie nenhuma**: ver a [LICENSE](LICENSE).
 
 ---
 
