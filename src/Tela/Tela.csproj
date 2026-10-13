@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <AssemblyName>Tela</AssemblyName>
+    <RootNamespace>Tela</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <BuiltInComInteropSupport>false</BuiltInComInteropSupport>
+    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Assets\tela.ico</ApplicationIcon>
+
+    <Version>1.0.0</Version>
+    <Product>Tela</Product>
+    <Company>zimutek</Company>
+    <Authors>zimutek</Authors>
+    <Copyright>© zimutek</Copyright>
+    <Description>A video player for Windows and Linux: everything you need, nothing in the way.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AvaloniaResource Include="Assets\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.3.22" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.3.22" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.3.22" />
+    <!-- D-Bus (Linux: não deixar o ecrã apagar). É a mesma versão que o Avalonia já traz. -->
+    <PackageReference Include="Tmds.DBus.Protocol" Version="0.21.3" />
+  </ItemGroup>
+
+  <!-- No Windows a libmpv vai ao lado do executável (fora do ficheiro único, para se poder
+       trocar). Descarrega-se com tools/obter-libmpv.ps1. No Linux usa-se a da distribuição. -->
+  <ItemGroup Condition="Exists('..\..\lib\win-x64\libmpv-2.dll') And ('$(RuntimeIdentifier)' == '' Or $(RuntimeIdentifier.StartsWith('win')))">
+    <None Include="..\..\lib\win-x64\libmpv-2.dll" Link="libmpv-2.dll"
+          CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Tela.Tests" />
+    <InternalsVisibleTo Include="Capturas" />
+  </ItemGroup>
+
+</Project>

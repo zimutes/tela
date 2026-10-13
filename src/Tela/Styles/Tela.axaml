@@ -1,0 +1,304 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ctl="using:Tela.Controls">
+
+  <!-- Painéis -->
+  <Style Selector="Border.panel">
+    <Setter Property="Background" Value="{DynamicResource PanelBg}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource PanelBorder}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="CornerRadius" Value="{DynamicResource PanelRadius}" />
+    <Setter Property="BoxShadow" Value="{DynamicResource PanelShadow}" />
+  </Style>
+
+  <!-- A barra de comandos, a flutuar em cima do vídeo -->
+  <Style Selector="Border.bar">
+    <Setter Property="Background" Value="{DynamicResource BarBg}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource PanelBorder}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="CornerRadius" Value="{DynamicResource PanelRadius}" />
+    <Setter Property="BoxShadow" Value="{DynamicResource PanelShadow}" />
+  </Style>
+
+  <!-- Cartões: mensagens, "a seguir", informação, pré-visualização -->
+  <Style Selector="Border.card, Border.osd, Border.preview">
+    <Setter Property="Background" Value="{DynamicResource BarBg}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource PanelBorder}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="CornerRadius" Value="{DynamicResource InsetRadius}" />
+    <Setter Property="BoxShadow" Value="{DynamicResource PanelShadow}" />
+    <Setter Property="Padding" Value="14,11" />
+  </Style>
+  <Style Selector="Border.osd">
+    <Setter Property="Padding" Value="14,9" />
+  </Style>
+  <Style Selector="Border.preview">
+    <Setter Property="Padding" Value="5,5,5,6" />
+  </Style>
+  <Style Selector="Border.thumb">
+    <Setter Property="Background" Value="Black" />
+    <Setter Property="CornerRadius" Value="{DynamicResource ValueRadius}" />
+  </Style>
+  <Style Selector="Border.flash">
+    <Setter Property="Background" Value="#8C000000" />
+  </Style>
+
+  <Style Selector="TextBlock.label">
+    <Setter Property="Foreground" Value="{DynamicResource TextMuted}" />
+    <Setter Property="FontFamily" Value="{DynamicResource BtnFont}" />
+    <Setter Property="FontWeight" Value="{DynamicResource BtnWeight}" />
+    <Setter Property="FontSize" Value="11" />
+    <Setter Property="LetterSpacing" Value="{DynamicResource BtnSpacing}" />
+    <Setter Property="VerticalAlignment" Value="Center" />
+  </Style>
+  <Style Selector="TextBlock.muted">
+    <Setter Property="Foreground" Value="{DynamicResource TextMuted}" />
+  </Style>
+  <Style Selector="TextBlock.time">
+    <Setter Property="FontFamily" Value="{DynamicResource FontMono}" />
+    <Setter Property="FontSize" Value="12.5" />
+    <Setter Property="Foreground" Value="{DynamicResource Text}" />
+  </Style>
+  <!-- No 1995 a barra é cinzenta: o tempo vai num mostrador preto, como no Winamp -->
+  <Style Selector="Window.bevel TextBlock#TimeText">
+    <Setter Property="Background" Value="Black" />
+    <Setter Property="Foreground" Value="{DynamicResource Lcd}" />
+    <Setter Property="Padding" Value="6,2" />
+  </Style>
+
+  <!-- Espaçamento das letras nos botões (os temas com maiúsculas pedem-no) -->
+  <Style Selector="Button /template/ ContentPresenter#PART_ContentPresenter">
+    <Setter Property="TextElement.FontFamily" Value="{DynamicResource BtnFont}" />
+  </Style>
+  <Style Selector="Button TextBlock">
+    <Setter Property="LetterSpacing" Value="{DynamicResource BtnSpacing}" />
+  </Style>
+
+  <!-- Botões grandes do ecrã inicial -->
+  <Style Selector="Button.big">
+    <Setter Property="MinHeight" Value="38" />
+    <Setter Property="Padding" Value="20,0" />
+    <Setter Property="FontSize" Value="13.5" />
+  </Style>
+  <Style Selector="Button.primary">
+    <Setter Property="Background" Value="{DynamicResource PlayBg}" />
+    <Setter Property="Foreground" Value="{DynamicResource PlayFg}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource PlayBg}" />
+  </Style>
+  <Style Selector="Button.primary /template/ Border#PART_Border">
+    <Setter Property="BoxShadow" Value="{DynamicResource PlayShadow}" />
+  </Style>
+  <Style Selector="Button.primary:pointerover">
+    <Setter Property="Background" Value="{DynamicResource PlayBg}" />
+    <Setter Property="Foreground" Value="{DynamicResource PlayFg}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource PlayBg}" />
+    <Setter Property="Opacity" Value="0.9" />
+  </Style>
+
+  <!-- Botões da barra de comandos: só ícone, sem caixa até se passar por cima -->
+  <Style Selector="Button.tool">
+    <Setter Property="Width" Value="34" />
+    <Setter Property="Height" Value="32" />
+    <Setter Property="MinHeight" Value="0" />
+    <Setter Property="Padding" Value="0" />
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="BorderBrush" Value="Transparent" />
+    <Setter Property="Foreground" Value="{DynamicResource Text}" />
+  </Style>
+  <Style Selector="Button.tool /template/ Border#PART_Border">
+    <Setter Property="BoxShadow" Value="none" />
+  </Style>
+  <Style Selector="Button.tool:pointerover">
+    <Setter Property="Background" Value="{DynamicResource BtnBgHover}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource BtnBorder}" />
+    <Setter Property="Foreground" Value="{DynamicResource Text}" />
+  </Style>
+  <Style Selector="Button.tool:pointerover /template/ Border#PART_Border">
+    <Setter Property="BoxShadow" Value="{DynamicResource BtnShadowHover}" />
+  </Style>
+  <Style Selector="Button.tool ctl|Glyph">
+    <Setter Property="Width" Value="15" />
+    <Setter Property="Height" Value="15" />
+  </Style>
+  <Style Selector="Button.tool.text">
+    <Setter Property="Width" Value="NaN" />
+    <Setter Property="MinWidth" Value="40" />
+    <Setter Property="Padding" Value="8,0" />
+    <Setter Property="FontFamily" Value="{DynamicResource FontMono}" />
+    <Setter Property="FontSize" Value="12" />
+  </Style>
+  <Style Selector="Button.tool.play">
+    <Setter Property="Width" Value="42" />
+    <Setter Property="Background" Value="{DynamicResource PlayBg}" />
+    <Setter Property="Foreground" Value="{DynamicResource PlayFg}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource PlayBg}" />
+  </Style>
+  <Style Selector="Button.tool.play /template/ Border#PART_Border">
+    <Setter Property="BoxShadow" Value="{DynamicResource PlayShadow}" />
+  </Style>
+  <Style Selector="Button.tool.play:pointerover">
+    <Setter Property="Background" Value="{DynamicResource PlayBg}" />
+    <Setter Property="Foreground" Value="{DynamicResource PlayFg}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource PlayBg}" />
+    <Setter Property="Opacity" Value="0.9" />
+  </Style>
+  <Style Selector="Button.tool.on">
+    <Setter Property="Foreground" Value="{DynamicResource Accent}" />
+  </Style>
+  <!-- No 1995 os botões da barra são caixas em relevo, sempre -->
+  <Style Selector="Window.bevel Button.tool">
+    <Setter Property="Background" Value="{DynamicResource BtnBg}" />
+    <Setter Property="Foreground" Value="{DynamicResource BtnFg}" />
+  </Style>
+  <Style Selector="Window.bevel Button.tool /template/ Border#PART_Border">
+    <Setter Property="BoxShadow" Value="{DynamicResource BtnShadow}" />
+  </Style>
+  <Style Selector="Window.bevel Button.tool:pressed /template/ Border#PART_Border">
+    <Setter Property="BoxShadow" Value="{DynamicResource BtnShadowPressed}" />
+  </Style>
+
+  <!-- Janela estreita (ou mini): sai primeiro o que é menos preciso -->
+  <Style Selector="Window.narrow :is(Control).wide">
+    <Setter Property="IsVisible" Value="False" />
+  </Style>
+
+  <!-- Temas com relevo: premir afunda o conteúdo 1 px (Windows 95) -->
+  <Style Selector="Window.sink Button:pressed /template/ ContentPresenter#PART_ContentPresenter">
+    <Setter Property="RenderTransform" Value="translate(1px, 1px)" />
+  </Style>
+  <!-- Oceanic: o botão sobe um pouco ao passar por cima -->
+  <Style Selector="Window.lift Button:pointerover">
+    <Setter Property="RenderTransform" Value="translate(0px, -1px)" />
+  </Style>
+  <Style Selector="Window.motion Button">
+    <Setter Property="Transitions">
+      <Transitions>
+        <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.18" />
+      </Transitions>
+    </Setter>
+  </Style>
+
+  <!-- Barra de título -->
+  <Style Selector="Button.chrome">
+    <Setter Property="Width" Value="32" />
+    <Setter Property="Height" Value="28" />
+    <Setter Property="MinHeight" Value="0" />
+    <Setter Property="Padding" Value="0" />
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="BorderThickness" Value="0" />
+    <Setter Property="Foreground" Value="{DynamicResource TitleFg}" />
+    <Setter Property="Opacity" Value="0.85" />
+  </Style>
+  <Style Selector="Button.chrome /template/ Border#PART_Border">
+    <Setter Property="BoxShadow" Value="none" />
+  </Style>
+  <Style Selector="Button.chrome:pointerover">
+    <Setter Property="Background" Value="{DynamicResource BtnBgHover}" />
+    <Setter Property="Foreground" Value="{DynamicResource TitleFg}" />
+    <Setter Property="Opacity" Value="1" />
+  </Style>
+  <Style Selector="Button.chrome:pointerover /template/ Border#PART_Border">
+    <Setter Property="BoxShadow" Value="none" />
+  </Style>
+  <Style Selector="Button.chrome.close:pointerover">
+    <Setter Property="Background" Value="#E81123" />
+    <Setter Property="Foreground" Value="White" />
+  </Style>
+  <Style Selector="Button.chrome ctl|Glyph">
+    <Setter Property="Width" Value="12" />
+    <Setter Property="Height" Value="12" />
+  </Style>
+  <Style Selector="Window.bevel Button.chrome">
+    <Setter Property="Background" Value="#C0C0C0" />
+    <Setter Property="Foreground" Value="Black" />
+    <Setter Property="Width" Value="18" />
+    <Setter Property="Height" Value="16" />
+    <Setter Property="Margin" Value="2,0,0,0" />
+    <Setter Property="Opacity" Value="1" />
+  </Style>
+  <Style Selector="Window.bevel Button.chrome /template/ Border#PART_Border">
+    <Setter Property="BoxShadow" Value="{DynamicResource BtnShadow}" />
+  </Style>
+  <Style Selector="Window.bevel Button.chrome:pointerover">
+    <Setter Property="Background" Value="#C0C0C0" />
+    <Setter Property="Foreground" Value="Black" />
+  </Style>
+  <Style Selector="Window.bevel Button.chrome:pointerover /template/ Border#PART_Border">
+    <Setter Property="BoxShadow" Value="{DynamicResource BtnShadow}" />
+  </Style>
+  <Style Selector="Window.bevel Button.chrome:pressed /template/ Border#PART_Border">
+    <Setter Property="BoxShadow" Value="{DynamicResource BtnShadowPressed}" />
+  </Style>
+  <Style Selector="Window.bevel Button.chrome ctl|Glyph">
+    <Setter Property="Width" Value="9" />
+    <Setter Property="Height" Value="9" />
+  </Style>
+
+  <!-- Cartões do "continuar a ver" -->
+  <Style Selector="Button.resume">
+    <Setter Property="Width" Value="208" />
+    <Setter Property="Margin" Value="0,0,14,14" />
+    <Setter Property="Padding" Value="8,8,8,10" />
+    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+    <Setter Property="VerticalContentAlignment" Value="Stretch" />
+    <Setter Property="Background" Value="{DynamicResource PanelBg}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource PanelBorder}" />
+    <Setter Property="CornerRadius" Value="{DynamicResource InsetRadius}" />
+  </Style>
+  <Style Selector="Button.resume:pointerover">
+    <Setter Property="Background" Value="{DynamicResource BtnBgHover}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource BtnBorderHover}" />
+  </Style>
+  <Style Selector="Button.resume TextBlock">
+    <Setter Property="LetterSpacing" Value="0" />
+  </Style>
+  <Style Selector="Button.resume Button.forget">
+    <Setter Property="Opacity" Value="0" />
+  </Style>
+  <Style Selector="Button.resume:pointerover Button.forget">
+    <Setter Property="Opacity" Value="1" />
+  </Style>
+  <Style Selector="Button.forget">
+    <Setter Property="Width" Value="24" />
+    <Setter Property="Height" Value="24" />
+    <Setter Property="MinHeight" Value="0" />
+    <Setter Property="Padding" Value="0" />
+    <Setter Property="Margin" Value="5" />
+    <Setter Property="Background" Value="#B3000000" />
+    <Setter Property="BorderThickness" Value="0" />
+    <Setter Property="Foreground" Value="White" />
+    <Setter Property="CornerRadius" Value="12" />
+    <Setter Property="HorizontalAlignment" Value="Right" />
+    <Setter Property="VerticalAlignment" Value="Top" />
+  </Style>
+  <Style Selector="Button.forget:pointerover">
+    <Setter Property="Background" Value="#E81123" />
+    <Setter Property="Foreground" Value="White" />
+  </Style>
+  <Style Selector="Button.forget ctl|Glyph">
+    <Setter Property="Width" Value="10" />
+    <Setter Property="Height" Value="10" />
+  </Style>
+
+  <!-- Bordas de redimensionar: invisíveis, só o cursor -->
+  <Style Selector="Border.edge">
+    <Setter Property="Background" Value="Transparent" />
+  </Style>
+
+  <!-- Menus -->
+  <Style Selector="MenuFlyoutPresenter, ContextMenu">
+    <Setter Property="FontFamily" Value="{DynamicResource FontSans}" />
+    <Setter Property="FontSize" Value="12.5" />
+    <Setter Property="MaxHeight" Value="560" />
+  </Style>
+  <Style Selector="MenuItem">
+    <Setter Property="FontFamily" Value="{DynamicResource FontSans}" />
+    <Setter Property="FontSize" Value="12.5" />
+    <Setter Property="MinHeight" Value="0" />
+    <Setter Property="Padding" Value="10,5" />
+  </Style>
+  <Style Selector="ToolTip">
+    <Setter Property="FontFamily" Value="{DynamicResource FontSans}" />
+    <Setter Property="FontSize" Value="12" />
+  </Style>
+</Styles>

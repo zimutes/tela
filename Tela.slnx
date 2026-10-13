@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Tela/Tela.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Tela.Tests/Tela.Tests.csproj" />
+  </Folder>
+  <Folder Name="/tools/">
+    <Project Path="tools/Capturas/Capturas.csproj" />
+  </Folder>
+</Solution>
