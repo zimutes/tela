@@ -120,6 +120,22 @@ music player: same six themes, same "by zimutek".
 
 ## Install
 
+### Download
+
+From the [latest release](https://github.com/zimutes/tela/releases/latest):
+
+| File | For |
+|---|---|
+| `Tela-autonomo-win-x64.zip` | Windows 10/11 (x64). Self-contained: unzip anywhere and run `Tela.exe` (keep `libmpv-2.dll` next to it). |
+| `Tela-win-x64.zip` | Windows 10/11 (x64), smaller. Needs the [.NET 10 Runtime](https://dotnet.microsoft.com/download/dotnet/10.0). |
+| `Tela-linux-x64.tar.gz` · `Tela-linux-arm64.tar.gz` | Linux. Self-contained; install libmpv (see above), then `tar -xzf Tela-linux-x64.tar.gz && ./tela/instalar.sh` |
+
+The files are not signed: Windows SmartScreen may ask first (*More info → Run anyway*).
+Checksums are in `SHA256SUMS`. To get the Start menu entry, *Open with* and *Watch in Tela* on
+Windows, use the installer below instead.
+
+### Build from source
+
 **Windows** (PowerShell):
 
 ```powershell
@@ -147,10 +163,6 @@ cd tela
 
 It installs to `~/.local/opt/tela`, with a `tela` command in `~/.local/bin` and an entry in
 your applications menu (with *Open with* for video files), and tells you if libmpv is missing.
-
-Releases carry a small `Tela-win-x64.zip` (needs the .NET 10 runtime), a self-contained
-Windows zip and self-contained Linux packages (`./tela/instalar.sh` installs the one that
-comes with it).
 
 ## How it works
 

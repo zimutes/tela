@@ -122,6 +122,22 @@ o leitor de música: os mesmos seis temas, o mesmo "by zimutek".
 
 ## Instalar
 
+### Descarregar
+
+Da [versão mais recente](https://github.com/zimutes/tela/releases/latest):
+
+| Ficheiro | Para |
+|---|---|
+| `Tela-autonomo-win-x64.zip` | Windows 10/11 (x64). Autónomo: descomprimir onde quiser e abrir o `Tela.exe` (com a `libmpv-2.dll` ao lado). |
+| `Tela-win-x64.zip` | Windows 10/11 (x64), mais pequeno. Precisa do [runtime .NET 10](https://dotnet.microsoft.com/download/dotnet/10.0). |
+| `Tela-linux-x64.tar.gz` · `Tela-linux-arm64.tar.gz` | Linux. Autónomo; instale a libmpv (ver acima) e depois `tar -xzf Tela-linux-x64.tar.gz && ./tela/instalar.sh` |
+
+Os ficheiros não estão assinados: o SmartScreen do Windows pode perguntar primeiro (*Mais
+informações → Executar mesmo assim*). As somas de verificação estão em `SHA256SUMS`. Para ter a
+Tela no menu Iniciar, no *Abrir com* e o *Ver na Tela* no Windows, use antes o instalador de baixo.
+
+### Compilar a partir do código
+
 **Windows** (PowerShell):
 
 ```powershell
@@ -149,10 +165,6 @@ cd tela
 
 Fica em `~/.local/opt/tela`, com o comando `tela` em `~/.local/bin` e uma entrada no menu de
 aplicações (com *Abrir com* para ficheiros de vídeo), e avisa se faltar a libmpv.
-
-As versões publicadas trazem um `Tela-win-x64.zip` pequeno (precisa do runtime .NET 10), um zip
-autónomo para Windows e pacotes autónomos para Linux (o `./tela/instalar.sh` instala o que vem
-com ele).
 
 ## Como funciona
 
